@@ -15,13 +15,13 @@ def save_checkpoint(state, save_path, is_best=False, max_keep=None):
     save_dir = os.path.dirname(save_path)
     list_path = os.path.join(save_dir, 'latest_checkpoint')
 
-    save_path = os.path.basename(save_path)
+    save_path_b = os.path.basename(save_path)
     if os.path.exists(list_path):
         with open(list_path) as f:
             ckpt_list = f.readlines()
-            ckpt_list = [save_path + '\n'] + ckpt_list
+            ckpt_list = [save_path_b + '\n'] + ckpt_list
     else:
-        ckpt_list = [save_path + '\n']
+        ckpt_list = [save_path_b + '\n']
 
     if max_keep is not None:
         for ckpt in ckpt_list[max_keep:]:
