@@ -1,3 +1,5 @@
+#Reference: https://github.com/znxlwm/pytorch-MNIST-CelebA-GAN-DCGAN
+#Reference: https://github.com/yunjey/pytorch-tutorial/blob/master/tutorials/03-advanced/generative_adversarial_network/main.py
 import os, time
 import matplotlib
 matplotlib.use('Agg')
